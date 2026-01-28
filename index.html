@@ -9,11 +9,9 @@
     <style>
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #f9f7f2; /* Matches the card background */
+        background-color: #f9f7f2;
         margin: 0;
-        /* Removed flex centering constraints to allow natural document flow */
       }
-      /* Custom scrollbar hide for sleek look */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -25,14 +23,18 @@
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- CRITICAL FIX: Link to the TypeScript entry point so Vite can process it -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
